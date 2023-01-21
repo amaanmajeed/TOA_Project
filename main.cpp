@@ -98,6 +98,21 @@ void ustaad_ki_photo()
     cout << "    |l||||||||||||||||| ||||| |||||||||||L|||| ||||||| |||||||  || ||| | |||l|||| ||\n";
 }
 
+void ustaad_intro(){
+
+cout << "\n";
+cout << "   ____               _                    _          _____ _                    _           _ \n";
+cout << "  / __ \             | |                  | |        / ____(_)          /\      | |         | |\n";
+cout << " | |  | |_   _ _ __  | |     _____   _____| |_   _  | (___  _ _ __     /  \   __| | ___  ___| |\n";
+cout << " | |  | | | | | '__| | |    / _ \ \ / / _ | | | | |  \___ \| | '__|   / /\ \ / _` |/ _ \/ _ | |\n";
+cout << " | |__| | |_| | |    | |___| (_) \ V |  __| | |_| |  ____) | | |     / ____ | (_| |  __|  __| |\n";
+cout << "  \____/ \__,_|_|    |______\___/ \_/ \___|_|\__, | |_____/|_|_|    /_/    \_\__,_|\___|\___|_|\n";
+cout << "                                              __/ |                                            \n";
+cout << "                                             |___/\n";
+cout << "\n";
+
+}
+
 int main()
 {
     cout << "Welcome to the madlib generator!" << endl;
@@ -117,66 +132,3 @@ int main()
         }
     }
 }
-
-/*
-
-Sir Adeel's subject matter expertise:
-
-Sir Adeel's expertise in teaching theory of automata is unmatched.
-Sir Adeel's knowledge of database management is impressive.
-Sir Adeel's ability to explain complex concepts in a simple way is remarkable.
-Sir Adeel's approach to teaching data structures and algorithms is outstanding.
-Sir Adeel's knowledge of his subject matter is truly impressive.
-Sir Adeel's passion for teaching is evident in his lessons.
-Sir Adeel is an expert in object-oriented programming.
-
-Sir Adeel's preparation and delivery of lessons:
-
-Sir Adeel's classes are always well-prepared and informative.
-Sir Adeel's lessons are always thought-provoking and challenging.
-Sir Adeel's lessons are always well-structured, making it easy to follow.
-Sir Adeel's approach to teaching is interactive and encourages participation.
-Sir Adeel's teaching is always clear and easy to understand.
-Sir Adeel's enthusiasm for teaching is contagious.
-Sir Adeel's ability to make boring subjects interesting is truly a gift.
-Sir Adeel's teaching is always timely and relevant to the students.
-
-Sir Adeel's ability to simplify complex concepts:
-
-Sir Adeel's ability to explain complex ideas in simple terms is a real gift.
-Sir Adeel's patience and understanding are invaluable assets as a teacher.
-Sir Adeel's ability to make difficult concepts easy to understand is truly remarkable.
-Sir Adeel's ability to break down complex ideas into manageable chunks is truly admirable.
-Sir Adeel's ability to make complex concepts easy to grasp is truly remarkable.
-
-Sir Adeel's commitment to students' success
-
-Sir Adeel truly cares about the well-being and success of his students.
-Sir Adeel goes above and beyond to ensure his students understand the material.
-Sir Adeel is always available to help students who are struggling.
-Sir Adeel's encouragement and support have helped me to succeed in his class.
-Sir Adeel's kind and compassionate nature makes him a favorite among students.
-Sir Adeel's investment in his students' success is clear through his teaching.
-Sir Adeel's love for teaching is matched only by his love for his students.
-
-Sir Adeel's Kindness
-
-Sir Adeel's kindness and generosity towards his students is truly remarkable.
-Sir Adeel is one of the kindest teachers I have ever had the pleasure of learning from.
-Sir Adeel's genuine care and concern for his students is evident in everything he does.
-Sir Adeel's approachable and easy-going nature makes him a beloved teacher among students.
-Sir Adeel's ability to connect with his students on a personal level is truly admirable.
-Sir Adeel's kind and understanding nature makes him a great mentor and role model.
-Sir Adeel's positive attitude and kind words of encouragement always brighten up my day.
-
-Sir Adeel's teaching style and effectiveness:
-
-Sir Adeel is an exceptional teacher who truly cares about his students' success.
-Sir Adeel's teaching style is both engaging and effective.
-Sir Adeel is one of the best teachers I have ever had.
-Sir Adeel's dedication to his students is evident in his teaching.
-Sir Adeel's approach to teaching is holistic, catering to the needs of every student.
-Sir Adeel's ability to connect with his students is truly admirable.
-Sir Adeel's approach to teaching is truly unique and effective.
-
-*/

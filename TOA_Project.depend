@@ -1,0 +1,8 @@
+# depslib dependency file v1.0
+1674316489 source:c:\users\hp\documents\git\toa_project\main.cpp
+	<iostream>
+	<map>
+	<vector>
+	<string>
+	<random>
+

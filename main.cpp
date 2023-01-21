@@ -3,76 +3,26 @@
 #include <vector>
 #include <string>
 #include <random>
+#include <time.h>
+#include <cstdlib>
 
 using namespace std;
 
 map<string, vector<vector<string>>> rules = {
-    {"S", {
-        {"NP", "VP"},
-        {"Interj", "NP", "VP"}
-    }},
-    {"NP", {
-        {"Det", "N"},
-        {"Det", "N", "that", "VP"},
-        {"Det", "Adj", "N"}
-    }},
-    {"VP", {
-        {"Vtrans", "NP"},
-        {"Vintr"}
-    }},
-    {"Interj", {
-        {"oh"},
-        {"my"},
-        {"wow"},
-        {"darn"}
-    }},
-    {"Det", {
-        {"this"},
-        {"that"},
-        {"the"}
-    }},
-    {"N", {
-        {"amoeba"},
-        {"dichotomy"},
-        {"seagull"},
-        {"trombone"},
-        {"overstaffed"},
-        {"corsage"}
-    }},
-    {"Adj", {
-        {"bald"},
-        {"smug"},
-        {"important"},
-        {"tame"},
-        {"overstaffed"},
-        {"corsage"}
-    }},
-    {"Vtrans", {
-        {"computes"},
-        {"examines"},
-        {"foregrounds"}
-    }},
-    {"Vintr", {
-        {"coughs"},
-        {"daydreams"},
-        {"whines"}
-    }}
-};
-
-map<string, vector<vector<string>>> rulesheet = {
-    {"S", {{"Subject_Matter"}, {}}},
+    {"S", {{"Subject_Matter"}}},
 
     {"Subject_Matter", {{"Follow_up", "Subject", "Praise", "Person"}}},
 
     {"Person", {{"Sir Adeel's"}, {"Adeel Ashraf's"}, {"His"}}},
-    {"Praise", {{"expertise in teaching"}, {"knowledge of"}, {"ability to explain"}, {"approach to teaching"}, {"knowledge of"}}},
-    {"Subject", {{"theory of automata"}, {"database management"}, {"complex concepts in a simple way"}, {"data structures and algorithms"}, {"his subject matter"}, {"in object-oriented programming"}}},
+    {"Praise", {{"expertise in"}, {"knowledge of"}, {"ability to explain"}, {"approach to teaching"}, {"knowledge of"}}},
+    {"Subject", {{"theory of automata"}, {"database management"}, {"teaching complex concepts in a simple way"}, {"data structures and algorithms"}, {"his subject matter"}, {"in object-oriented programming"}}},
     {"Follow_up", {{"is unmatched"}, {"is impressive"}, {"is remarkable"}, {"is outstanding"}, {"is truly impressive"}}},
 
 };
 
 string generate_sentence()
 {
+
     string sentence = "";
     vector<string> symbols = {"S"}; // Start with the sentence non-terminal
 
@@ -83,12 +33,13 @@ string generate_sentence()
         string current_symbol = symbols.back();
         symbols.pop_back();
 
-        if (rulesheet.count(current_symbol) > 0)
+        if (rules.count(current_symbol) > 0)
         {
+            // line used to truely randomize the input
+            srand(time(0));
             // Pick a random expansion for the non-terminal
-            auto expansions = rulesheet[current_symbol];
-            uniform_int_distribution<int> dist(0, expansions.size() - 1);
-            int rand_index = dist(rng);
+            auto expansions = rules[current_symbol];
+            int rand_index = rand() % expansions.size();
             auto expansion = expansions[rand_index];
 
             // Add the expansion to the list of symbols to expand
@@ -106,20 +57,65 @@ string generate_sentence()
     return sentence;
 }
 
+void ustaad_ki_photo()
+{
 
-int main() {
+    cout << "    llllllllllllllllllllllllllllllllllllll||llllllllllllllllllllllllllllllllllllllll\n";
+    cout << "    lllllllllllllllllllllllllllll|g@@@@@@@@@@@@@@@@@ggllllllllllllllllllllllllllllll\n";
+    cout << "    llllllllllllllllllllllllllg@@@@@@@@@@@@@@@@@@@@@@@@@@|llllllllllllllllllllllllll\n";
+    cout << "    llllllllllllllllllllllll@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@gllllllllllllllllllllllll\n";
+    cout << "    lllllllllllllllllllllll@@@@@@@@@@@@@$$@@@@@@@@@@@@@@@@@@@lllllllllllllllllllllll\n";
+    cout << "    lllllllllllllllllllll$@@@@@@@@@@@$@@@@@@@@@@@@@@@@@@@@@@@@llllllllllllllllllllll\n";
+    cout << "    llllllllllllllllllllj@@@@@@@@@@@@@@@@@@@@$$$@@@@@@@@@@@@@@@lllllllllllllllllllll\n";
+    cout << "    llllllllllllllllllll]@@@@@@@@@@@@@M%%%%MMMTTTM%$@@@@@@@@@@@lllllllllllllllllllll\n";
+    cout << "    llllllllllllllllllll$@@@@@@@@@@M$LlL|||||l||||llll$$@@@@@@@@llllllllllllllllllll\n";
+    cout << "    llllllllllllllllllll$@@@@@@@@$$$llllllllllllllll$$$@@@@@@@@@llllllllllllllllllll\n";
+    cout << "    llllllllllllllllllll$@@@@@@@@$$$$llllllllllllll$$$$@@@@@@@@@llllllllllllllllllll\n";
+    cout << "    lllllllllllllllllllll$@@@@M$$$$$$@$lllllllyggggg$$$$$%@@@@@@llllllllllllllllllll\n";
+    cout << "    lllllllllllllllllllll$@@@@$$$@$$$$$$$$$l$$$$$$$$$$@@$$$@@@@@llllllllllllllllllll\n";
+    cout << "    llllllllllllllllllll$@M%@@$$$$$$$NL$@$$$$$$Mg&$@$$$$$$$@M$$@llllllllllllllllllll\n";
+    cout << "    lllllllllllllllllllll$$$$@$$$$$$$$$$$$ll$$$$$$l$$$$$$$$$$$$lllllllllllllllllllll\n";
+    cout << "    llllllllllllllllllllll$$$@$$$$$$$ll$$ll|j$$llllllll$$$@@$$llllllllllllllllllllll\n";
+    cout << "    lllllllllllllllllllllll$$@$$$$llll$$MT||l$$lL||lll$$$$@$$lllllllllllllllllllllll\n";
+    cout << "    llllllllllllllllllllllll$$@$$$ll@$$$$@g|l@$lllLlll$$$@MMllllllllllllllllllllllll\n";
+    cout << "    lllllllllllllllllllllllllj@@@$$$$@@@@@@@@@@@@@ll$$$@@@llllllllllllllllllllllllll\n";
+    cout << "    llllllllllllllllllllllllll%@@@@@@@@$$$lll$$$&$$@$@@@@lllllllllllllllllllllllllll\n";
+    cout << "    lllllllllllllllllllllllllll@@@@$@$$$$ggggl$$$l$@@@@@Mlllllllllllllllllllllllllll\n";
+    cout << "    lllllllllllllllllllllllllll|@@@@@@$$$$@@@$Tll$$$@@@@llllllllllllllllllllllllllll\n";
+    cout << "    lllllllllllllllllllllllllll|@@@@@@@@@$$$$@@@@@@@@@$$@lllllllllllllllllllllllllll\n";
+    cout << "    lllllllllllllllllllllllll$|j@$$@@@@@@@@@@@@@@@@@M$$$@|llllllllllllllllllllllllll\n";
+    cout << "    llllllllllllllllllllll&lT|||$@$$%$@@@@@@@@@@@@$l$$$@'||lll&lllllllllllllllllllll\n";
+    cout << "    lllllllllllllllll&|||lL|||||l@$$$$$$$$$M$$$Ml$$$$$@L |||l|||||M&llllllllllllllll\n";
+    cout << "    llllllllllll&M |||||l||||| ||$$$$ll$$$$M$lllllll$@|L ||||T|||||||||$llllllllllll\n";
+    cout << "    lllllll$M|||||||||||T||||| |||@$$$lll$$llllllll$@||   |||||L|||||||||l&lllllllll\n";
+    cout << "    lll$M|||||||||||||L|||,ggwg,|||&$$$lll$llllll$$$|L|ggmg||l||||| ||||||||||Mlllll\n";
+    cout << "    l||||||||||||||||||||||l|lllLl|||$$lllllllll$$$LL|ll||'|iM||L | || | ||||||||l&l\n";
+    cout << "    |||||||||| |||| L| ||||||l|l|lL|||1lllllll$@||L||||||`|  | ||||||  |||||||||l|||\n";
+    cout << "    L||||||||||||||||| ||| ||||||||l|L||&ll$$&||ll|'||| ||||| ||| |||| |||||||||||||\n";
+    cout << "    ||||l||||||||||||| |||| |||| ||||||l||%@|||'|| |||  || ||||| | ||   ||||||||||||\n";
+    cout << "    |||||||||||||||||||||||||||||||||||||l|||  | || || |||| |||||| ||  ||||||||||| |\n";
+    cout << "    i|||lL|||||||||||||| | || ||||||||||ll||| | |||||  ||| ||||| || ||||'|||l|||||||\n";
+    cout << "    |l||||||||||||||||| ||||| |||||||||||L|||| ||||||| |||||||  || ||| | |||l|||| ||\n";
+}
+
+int main()
+{
     cout << "Welcome to the madlib generator!" << endl;
-    string choice = "a";
-    cout << "press 'y' to stop" << endl;
+    cout << "Press enter to continue | press any other key + Enter to stop," << endl;
 
-    while (choice != "y")
+    ustaad_ki_photo();
+
+    while (true)
     {
-        cout << generate_sentence() << endl;
-        cout << "enter choice" << endl;
-        cin >> choice;
-    }
+        cout << generate_sentence();
 
-    return 0;
+        // Algo to check "Enter" key. If not then exit the loop
+        char choice = getchar();
+        if (choice != '\n')
+        {
+            break;
+        }
+    }
 }
 
 /*

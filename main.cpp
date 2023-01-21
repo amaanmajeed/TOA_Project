@@ -60,10 +60,15 @@ map<string, vector<vector<string>>> rules = {
 };
 
 map<string, vector<vector<string>>> rulesheet = {
-    {"S", {{"Person"}, {"Praise"}}},
-    {"Person", {{"Adeel"}, {"Adeel Ashraf"}, {"He"}, {"His"}}},
-    {"Praise", {{"is the best teacher"}, {"has the most beautiful heart"}}}
-    
+    {"S", {{"Subject_Matter"}, {}}},
+
+    {"Subject_Matter", {{"Follow_up", "Subject", "Praise", "Person"}}},
+
+    {"Person", {{"Sir Adeel's"}, {"Adeel Ashraf's"}, {"His"}}},
+    {"Praise", {{"expertise in teaching"}, {"knowledge of"}, {"ability to explain"}, {"approach to teaching"}, {"knowledge of"}}},
+    {"Subject", {{"theory of automata"}, {"database management"}, {"complex concepts in a simple way"}, {"data structures and algorithms"}, {"his subject matter"}, {"in object-oriented programming"}}},
+    {"Follow_up", {{"is unmatched"}, {"is impressive"}, {"is remarkable"}, {"is outstanding"}, {"is truly impressive"}}},
+
 };
 
 string generate_sentence()
@@ -78,10 +83,10 @@ string generate_sentence()
         string current_symbol = symbols.back();
         symbols.pop_back();
 
-        if (rules.count(current_symbol) > 0)
+        if (rulesheet.count(current_symbol) > 0)
         {
             // Pick a random expansion for the non-terminal
-            auto expansions = rules[current_symbol];
+            auto expansions = rulesheet[current_symbol];
             uniform_int_distribution<int> dist(0, expansions.size() - 1);
             int rand_index = dist(rng);
             auto expansion = expansions[rand_index];
@@ -104,7 +109,16 @@ string generate_sentence()
 
 int main() {
     cout << "Welcome to the madlib generator!" << endl;
-    cout << generate_sentence() << endl;
+    string choice = "a";
+    cout << "press 'y' to stop" << endl;
+
+    while (choice != "y")
+    {
+        cout << generate_sentence() << endl;
+        cout << "enter choice" << endl;
+        cin >> choice;
+    }
+
     return 0;
 }
 
@@ -115,30 +129,19 @@ Sir Adeel's subject matter expertise:
 Sir Adeel's expertise in teaching theory of automata is unmatched.
 Sir Adeel's knowledge of database management is impressive.
 Sir Adeel's ability to explain complex concepts in a simple way is remarkable.
-Sir Adeel is an expert in object-oriented programming.
 Sir Adeel's approach to teaching data structures and algorithms is outstanding.
 Sir Adeel's knowledge of his subject matter is truly impressive.
 Sir Adeel's passion for teaching is evident in his lessons.
-
-Sir Adeel's teaching style and effectiveness:
-
-Sir Adeel is an exceptional teacher who truly cares about his students' success.
-Sir Adeel's teaching style is both engaging and effective.
-Sir Adeel is one of the best teachers I have ever had.
-Sir Adeel's dedication to his students is evident in his teaching.
-Sir Adeel's approach to teaching is holistic, catering to the needs of every student.
-Sir Adeel's ability to connect with his students is truly admirable.
-Sir Adeel's approach to teaching is truly unique and effective.
-
+Sir Adeel is an expert in object-oriented programming.
 
 Sir Adeel's preparation and delivery of lessons:
 
 Sir Adeel's classes are always well-prepared and informative.
-Sir Adeel's enthusiasm for teaching is contagious.
 Sir Adeel's lessons are always thought-provoking and challenging.
-Sir Adeel's teaching is always clear and easy to understand.
-Sir Adeel's approach to teaching is interactive and encourages participation.
 Sir Adeel's lessons are always well-structured, making it easy to follow.
+Sir Adeel's approach to teaching is interactive and encourages participation.
+Sir Adeel's teaching is always clear and easy to understand.
+Sir Adeel's enthusiasm for teaching is contagious.
 Sir Adeel's ability to make boring subjects interesting is truly a gift.
 Sir Adeel's teaching is always timely and relevant to the students.
 
@@ -169,5 +172,15 @@ Sir Adeel's approachable and easy-going nature makes him a beloved teacher among
 Sir Adeel's ability to connect with his students on a personal level is truly admirable.
 Sir Adeel's kind and understanding nature makes him a great mentor and role model.
 Sir Adeel's positive attitude and kind words of encouragement always brighten up my day.
+
+Sir Adeel's teaching style and effectiveness:
+
+Sir Adeel is an exceptional teacher who truly cares about his students' success.
+Sir Adeel's teaching style is both engaging and effective.
+Sir Adeel is one of the best teachers I have ever had.
+Sir Adeel's dedication to his students is evident in his teaching.
+Sir Adeel's approach to teaching is holistic, catering to the needs of every student.
+Sir Adeel's ability to connect with his students is truly admirable.
+Sir Adeel's approach to teaching is truly unique and effective.
 
 */

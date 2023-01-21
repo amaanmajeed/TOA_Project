@@ -24,9 +24,9 @@ map<string, vector<vector<string>>> rules = {
     // KN -> kindness and generosity towards his students ADJ
     {"Kind_Nature", {{"Adjectives", "kindness and generosity towards his students", "Pronouns"}}},
     // D -> PRO OLS
-    {"Dedication", {{"One_Liners", "Pronouns"}}},
+    {"Dedication", {{"One_liners", "Pronouns"}}},
     // K -> PRO OL
-    {"Kindness", {{"One_Liner", "Pronoun"}}},
+    {"Kindness", {{"One_liner", "Pronoun"}}},
 
     // Further Expansion of the grammar
     {"Pronouns", {{"Sir Adeel's"}, {"Sir Adeel Ashraf's"}, {"His"}}},
@@ -42,8 +42,8 @@ map<string, vector<vector<string>>> rules = {
     {"Prequality", {{"ability to"}, {"way of"}}},
     {"Quality", {{"explain complex concepts in a simple way"}, {"explain complex ideas in simple terms"}, {"make boring subjects interesting"}, {"break down complex ideas into manageable chunks"}, {"make complex concepts easy to grasp"}, {"connect with his students"}}},
 
-    {"One_liners", {{"investment in his students' success is clear through his teaching"}, {"love for teaching is matched by his love for his students"}, {"teaching style is both engaging and effective"}, {"dedication to his students is evident in his teaching"}, {"approach to teaching is holistic, catering to the needs of every student"}, {"enthusiasm for teaching is contagious"}, {"encouragement and support has helped me to succeed in his class"}, {"kind and compassionate nature makes him a favorite among students"}, {"genuine care and concern for his students is evident in everything he does"}, {"approachable and easy-going nature makes him a beloved teacher among students"}, {"kind and understanding nature makes him a great mentor and role model"}, {"positive attitude and kind words of encouragement always brighten up my day"}, {"dedication to his students is evident in his teaching"}, {"teaching style is both engaging and effective"}}},
-    {"One_liner", {{"is an exceptional teacher who truly cares about his students' success"}, {"is one of the best teachers I have ever had"}, {"is one of the kindest teachers I have ever had the pleasure of learning from"}, {"is an exceptional teacher who truly cares about the success of his students"}, {"is one of the best teachers I have ever had"}, {"nature of going above and beyond to ensure his students understand the material is remarkable"}, {"goes above and beyond to ensure his students understand the material"}}}
+    {"One_liners", {{"investment in his students' success is clear through his teaching"}, {"love for teaching is matched by his love for his students"}, {"teaching style is both engaging and effective"}, {"dedication to his students is evident in his teaching"}, {"approach to teaching is holistic, catering to the needs of every student"}, {"enthusiasm for teaching is contagious"}, {"encouragement and support has helped me to succeed in his class"}, {"kind and compassionate nature makes him a favorite among students"}, {"genuine care and concern for his students is evident in everything he does"}, {"approachable and easy-going nature makes him a beloved teacher among students"}, {"kind and understanding nature makes him a great mentor and role model"}, {"positive attitude and kind words of encouragement always brighten up my day"}, {"dedication to his students is evident in his teaching"}, {"teaching style is both engaging and effective"}, {"nature of going above and beyond to ensure his students understand the material is remarkable"}}},
+    {"One_liner", {{"is an exceptional teacher who truly cares about his students' success"}, {"is one of the best teachers I have ever had"}, {"is one of the kindest teachers I have ever had the pleasure of learning from"}, {"is an exceptional teacher who truly cares about the success of his students"}, {"is one of the best teachers I have ever had"}, {"goes above and beyond to ensure his students understand the material"}}},
 
 };
 
@@ -88,22 +88,22 @@ string generate_sentence()
             sentence += current_non_terminal + " ";
         }
     }
+    sentence.pop_back();
+    sentence += ".";
     return sentence;
 }
 
 void ustaad_intro()
 {
-
-    cout << "\n\n\n\n\n";
-    cout << "   ____               _                    _          _____ _                    _           _ \n";
-    cout << "  / __ \             | |                  | |        / ____(_)          /\      | |         | |\n";
-    cout << " | |  | |_   _ _ __  | |     _____   _____| |_   _  | (___  _ _ __     /  \   __| | ___  ___| |\n";
-    cout << " | |  | | | | | '__| | |    / _ \ \ / / _ | | | | |  \___ \| | '__|   / /\ \ / _` |/ _ \/ _ | |\n";
-    cout << " | |__| | |_| | |    | |___| (_) \ V |  __| | |_| |  ____) | | |     / ____ | (_| |  __|  __| |\n";
-    cout << "  \____/ \__,_|_|    |______\___/ \_/ \___|_|\__, | |_____/|_|_|    /_/    \_\__,_|\___|\___|_|\n";
-    cout << "                                              __/ |                                            \n";
-    cout << "                                             |___/\n";
-    cout << "\n\n\n";
+    cout << "\n";
+    cout << " _______  __   __  ______          ___      _______  __   __  _______  ___      __   __        _______  ___   ______          _______  ______   _______  _______  ___     \n";
+    cout << "|       ||  | |  ||    _ |        |   |    |       ||  | |  ||       ||   |    |  | |  |      |       ||   | |    _ |        |   _   ||      | |       ||       ||   |    \n";
+    cout << "|   _   ||  | |  ||   | ||        |   |    |   _   ||  |_|  ||    ___||   |    |  |_|  |      |  _____||   | |   | ||        |  |_|  ||  _    ||    ___||    ___||   |    \n";
+    cout << "|  | |  ||  |_|  ||   |_||_       |   |    |  | |  ||       ||   |___ |   |    |       |      | |_____ |   | |   |_||_       |       || | |   ||   |___ |   |___ |   |    \n";
+    cout << "|  |_|  ||       ||    __  |      |   |___ |  |_|  ||       ||    ___||   |___ |_     _|      |_____  ||   | |    __  |      |       || |_|   ||    ___||    ___||   |___ \n";
+    cout << "|       ||       ||   |  | |      |       ||       | |     | |   |___ |       |  |   |         _____| ||   | |   |  | |      |   _   ||       ||   |___ |   |___ |       |\n";
+    cout << "|_______||_______||___|  |_|      |_______||_______|  |___|  |_______||_______|  |___|        |_______||___| |___|  |_|      |__| |__||______| |_______||_______||_______|\n";
+    cout << "\n\n";
 }
 
 void ustaad_ki_photo()
@@ -147,23 +147,75 @@ void ustaad_ki_photo()
     cout << "    |l||||||||||||||||| ||||| |||||||||||L|||| ||||||| |||||||  || ||| | |||l|||| ||\n";
 }
 
+void ending()
+{
+    system("CLS");
+
+    cout << " __   __  _______  __   __    _______  _______  _______    _______  _______    _______  _______  _______  _______  _______  ___   __    _    __   __  _______  ___   __    _                            \n";
+    cout << "|  | |  ||   _   ||  | |  |  |       ||   _   ||  _    |  |       ||       |  |  _    ||   _   ||   _   ||       ||   _   ||   | |  |  | |  |  | |  ||   _   ||   | |  |  | |                           \n";
+    cout << "|  |_|  ||  |_|  ||  |_|  |  |  _____||  |_|  || |_|   |  |_     _||   _   |  | |_|   ||  |_|  ||  |_|  ||_     _||  |_|  ||   | |   |_| |  |  |_|  ||  |_|  ||   | |   |_| |                           \n";
+    cout << "|       ||       ||       |  | |_____ |       ||       |    |   |  |  | |  |  |       ||       ||       |  |   |  |       ||   | |       |  |       ||       ||   | |       |                           \n";
+    cout << "|_     _||       ||_     _|  |_____  ||       ||  _   |     |   |  |  |_|  |  |  _   | |       ||       |  |   |  |       ||   | |  _    |  |       ||       ||   | |  _    |                           \n";
+    cout << "  |   |  |   _   |  |   |     _____| ||   _   || |_|   |    |   |  |       |  | |_|   ||   _   ||   _   |  |   |  |   _   ||   | | | |   |  |   _   ||   _   ||   | | | |   |                           \n";
+    cout << " _____|  |__| |__|  |___|    |_______||__| |__||_______|    |___|  |_______|  |_______||__| |__||__| |__|  |___|  |__| |__||___| |_|  |__|  |__| |__||__| |__||___| |_|  |__|                           \n";
+    cout << "                                                                                                                                                                                                        \n";
+    cout << "                                           ___      _______  ___   _  ___   __    _                                                                                                                     \n";
+    cout << "                                          |   |    |       ||   | | ||   | |  |  | |                                                                                                                    \n";
+    cout << "                                          |   |    |    ___||   |_| ||   | |   |_| |                                                                                                                    \n";
+    cout << "                                          |   |    |   |___ |      _||   | |       |                                                                                                                    \n";
+    cout << "                                          |   |___ |    ___||     |_ |   | |  _    |                                                                                                                    \n";
+    cout << "                                          |       ||   |___ |    _  ||   | | | |   |                                                                                                                    \n";
+    cout << "                                          |_______||_______||___| |_||___| |_|  |__|                                                                                                                    \n";
+    cout << "                                                                                                                                                                                                        \n";
+    cout << " _______  _______  _______    _______  _______    ______   ___   ___        __   __  _______  ___   __    _    ______    _______  __   __  _______  _______  __   __    __   __  _______  ___   __    _ \n";
+    cout << "|   _   ||   _   ||       |  |       ||       |  |      | |   | |   |      |  | |  ||   _   ||   | |  |  | |  |    _ |  |       ||  | |  ||       ||   _   ||  | |  |  |  | |  ||   _   ||   | |  |  | |\n";
+    cout << "|  |_|  ||  |_|  ||    _  |  |_     _||   _   |  |  _    ||   | |   |      |  |_|  ||  |_|  ||   | |   |_| |  |   | ||  |    ___||  |_|  ||_     _||  |_|  ||  |_|  |  |  |_|  ||  |_|  ||   | |   |_| |\n";
+    cout << "|       ||       ||   |_| |    |   |  |  | |  |  | | |   ||   | |   |      |       ||       ||   | |       |  |   |_||_ |   |___ |       |  |   |  |       ||       |  |       ||       ||   | |       |\n";
+    cout << "|       ||       ||    ___|    |   |  |  |_|  |  | |_|   ||   | |   |___   |   _   ||       ||   | |  _    |  |    __  ||    ___||       |  |   |  |       ||_     _|  |       ||       ||   | |  _    |\n";
+    cout << "|   _   ||   _   ||   |        |   |  |       |  |       ||   | |       |  | || || ||   _   ||   | | | |   |  |   |  | ||   |___ |   _   |  |   |  |   _   |  |   |    |   _   ||   _   ||   | | | |   |\n";
+    cout << "|__| |__||__| |__||___|        |___|  |_______|  |______| |___| |_______|  |_|   |_||__| |__||___| |_|  |__|  |___|  |_||_______||__| |__|  |___|  |__| |__|  |___|    |__| |__||__| |__||___| |_|  |__|\n";
+    cout << "    \n\n\n\n";
+    cout << "           ___      _______  __   __  _______            __   __  _______  __   __            _______  ___   ______\n";
+    cout << "          |   |    |       ||  | |  ||       |          |  | |  ||       ||  | |  |          |       ||   | |    _ |\n";
+    cout << "          |   |    |   _   ||  |_|  ||    ___|          |  |_|  ||   _   ||  | |  |          |  _____||   | |   | ||\n";
+    cout << "          |   |    |  | |  ||       ||   |___           |       ||  | |  ||  |_|  |          | |_____ |   | |   |_||_\n";
+    cout << "          |   |___ |  |_|  ||       ||    ___|          |_     _||  |_|  ||       |          |_____  ||   | |    __  |\n";
+    cout << "          |       ||       | |     | |   |___             |   |  |       ||       |           _____| ||   | |   |  | |\n";
+    cout << "          |_______||_______|  |___|  |_______|            |___|  |_______||_______|          |_______||___| |___|  |_|\n";
+}
+
 int main()
 {
+    cout << "----------------------------------------" << endl;
     cout << "Welcome to the madlib generator!" << endl;
-    cout << "Press enter to continue | press any other key + Enter to stop," << endl;
+    cout << "Before we proceed, Enter Full Screen Mode" << endl;
+    cout << "----------------------------------------" << endl;
+    cout << "Press Enter to continue..." << endl;
+    cin.ignore();
+    system("CLS");
 
     ustaad_intro();
     ustaad_ki_photo();
+
+    cout << "Press Enter to continue..." << endl;
+    cin.ignore();
+    system("CLS");
+
+    cout << "--------------------------------------------------------------" << endl;
+    cout << "Press enter to continue | press any other key + Enter to stop," << endl;
+    cout << "--------------------------------------------------------------\n\n\n"
+         << endl;
 
     while (true)
     {
         cout << generate_sentence();
 
-        // Algo to check "Enter" key. If not then exit the loop
+        // Algorithm to check "Enter" key. If not then exit the loop
         char choice = getchar();
         if (choice != '\n')
         {
             break;
         }
     }
+    ending();
 }

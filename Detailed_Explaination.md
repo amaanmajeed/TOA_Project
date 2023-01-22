@@ -60,18 +60,19 @@ string generate_sentence()
 
 This function checks if the input symbol is a terminal, if it is the function returns that terminal. If it's a non-terminal, it picks a random expansion and recursively expands the symbols in the expansion by calling the function again with the new symbol, so the process is continued until all the symbols are terminal.
 
-The code also uses the C++11 `<random>` library to seed the random number generator with a random device, and a Mersenne Twister MT19937 engine is used to generate the random number.
+The code also uses the C++11 `srand(time(0))` library to seed the random number generator with a random device.
+The command ties the `rand()` function with the seconds hand on the clock, to get the random number.
 
 ```cpp
-random_device rd; // seed for the random number engine
-mt19937 gen(rd()); // Mersenne Twister MT19937 
-uniform_int_distribution<> dist(1, N);
+srand(time(0)); // Randomize the input with the clock (Second's Hand)
+rand(); //// Generate a random number with respect to the clock
 ```
 
-A function is called which shows the picture of the teacher in ASCII art
+A function is called which shows the picture of the teacher, and the intro words in ASCII art.
 
 ```cpp
 ustaad_ki_photo();
+ustaad_intro();
 ```
 
 Finally, the main function calls the generate_sentence function and prints the generated sentence to the console.
@@ -81,6 +82,7 @@ int main() {
     cout << "Welcome to the madlib generator!" << endl;
     cout << "Press enter to continue | press any other key + Enter to stop," << endl;
 
+    ustaad_intro();
     ustaad_ki_photo();
 
     while (true)

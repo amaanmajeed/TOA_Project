@@ -55,9 +55,6 @@ string generate_sentence()
     // Start with S (Non-terminal)
     vector<string> non_terminals = {"S"};
 
-    // Initializing Random Number Generator
-    mt19937 rng(random_device{}());
-
     // Iterate until you reach the end -> terminal
     while (!non_terminals.empty())
     {

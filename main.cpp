@@ -187,9 +187,9 @@ void ending()
 int main()
 {
     cout << "----------------------------------------" << endl;
-    cout << "Welcome to the madlib generator!" << endl;
+    cout << "Welcome to Language Generator!" << endl;
     cout << "This project was made by: Amaan, Usaid, Hashim" << endl;
-    cout << "It uses the concept of Parse tree." << endl;
+    cout << "It uses the concept of PDA." << endl;
     cout << "The project potrays our love for Sir Adeel" << endl;
     cout << "Before we proceed, Enter Full Screen Mode" << endl;
     cout << "----------------------------------------" << endl;

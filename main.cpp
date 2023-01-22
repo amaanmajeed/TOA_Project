@@ -188,6 +188,9 @@ int main()
 {
     cout << "----------------------------------------" << endl;
     cout << "Welcome to the madlib generator!" << endl;
+    cout << "This project was made by: Amaan, Usaid, Hashim" << endl;
+    cout << "It uses the concept of Parse tree." << endl;
+    cout << "The project potrays our love for Sir Adeel" << endl;
     cout << "Before we proceed, Enter Full Screen Mode" << endl;
     cout << "----------------------------------------" << endl;
     cout << "Press Enter to continue..." << endl;
@@ -203,8 +206,8 @@ int main()
 
     cout << "--------------------------------------------------------------" << endl;
     cout << "Press enter to continue | press any other key + Enter to stop," << endl;
-    cout << "--------------------------------------------------------------\n\n\n"
-         << endl;
+    cout << "--------------------------------------------------------------" << endl;
+    cout << "Who is Sir Adeel you ask.. Well keep pressing Enter to find out\n\n\n" << endl;
 
     while (true)
     {

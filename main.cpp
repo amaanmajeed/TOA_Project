@@ -29,8 +29,8 @@ map<string, vector<vector<string>>> rules = {
     {"Kindness", {{"One_liner", "Pronoun"}}},
 
     // Further Expansion of the grammar
-    {"Pronouns", {{"Sir Adeel's"}, {"Sir Adeel Ashraf's"}, {"His"}}},
-    {"Pronoun", {{"Sir Adeel"}, {"Sir Adeel Ashraf"}, {"He"}}},
+    {"Pronouns", {{"Sir Adeel's"}, {"His"}, {"Sir Adeel Ashraf's"}}},
+    {"Pronoun", {{"He"}, {"Sir Adeel"}, {"Sir Adeel Ashraf"}}},
 
     {"Praise", {{"expertise in"}, {"knowledge of"}, {"ability to explain"}, {"approach to teaching"}, {"knowledge of"}}},
     {"Subject", {{"theory of automata"}, {"database management"}, {"teaching complex concepts in a simple way"}, {"data structures and algorithms"}, {"his subject matter"}, {"in object-oriented programming"}}},
